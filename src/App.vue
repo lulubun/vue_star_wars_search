@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <md-field md-inline>
+      <label>Search</label>
+      <md-input v-model="search"></md-input>
+    </md-field>
+    <HelloWorld />
   </div>
 </template>
 
@@ -12,6 +15,9 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data: () => {
+    search: null
   }
 }
 </script>
